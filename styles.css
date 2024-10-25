@@ -1,0 +1,114 @@
+/* styles.css */
+/* Dark mode color scheme = black backgroud with contrasting boxes and text */
+:root {
+    --bg-color: #1a1a1a;
+    --container-bg: #2d2d2d;
+    --text-color: #2beb05;
+    --input-bg: #3d3d3d;
+    --button-bg: #000000;
+    --button-hover: #c7680f;
+    --border-color: #444444;
+}
+
+/* Basic styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+/* attempt to use VAR in CSS */
+.calculator {
+    background-color: var(--container-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+/* --container-bg is something I cannot recall seeing before. I probably have though */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+/* Input styles */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+/* Button styles */
+.tip-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 30px;
+    background-color: var(--button-bg);
+    color: #2beb05;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Results section */
+.results {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: var(--input-bg);
+    border-radius: 5px;
+}
+
+.results p {
+    margin: 10px 0;
+}
+
+/* Continue section */
+.continue-section {
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.continue-section p {
+    margin-bottom: 15px;
+}  

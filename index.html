@@ -1,0 +1,58 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator Ver_3 close to final</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tip Calculator Ver_5</h1>
+        <div class="calculator">
+            <!-- Use div class to work better with CSS. Receipt Amount Input -->
+            <div class="input-group">
+                <label for="Amount_owed">Receipt Amount (£):</label>
+                <input type="number" id="Amount_owed" min="0" step="0.01" required>
+            </div>
+
+            <!-- These are the 3 buttons to be styled in CSS. Tip Percentage Input -->
+            <div class="input-group">
+                <label>Tip Percentage:</label>
+                <div class="tip-buttons">
+                    <button onclick="Tip_is(10)">10%</button>
+                    <button onclick="Tip_is(15)">15%</button>
+                    <button onclick="Tip_is(20)">20%</button>
+                </div>
+                <!-- This is the 4th option of custom percentage -->
+                <input type="number" id="Tip_other" min="0" max="100" placeholder="Custom %" required>
+            </div>
+
+            <!-- Output results to screen -->
+            <div class="results">
+                <p>Tip Amount: <span id="Amount_tipped">£0.00</span></p>
+                <p>Total Amount: <span id="Amount_total">£0.00</span></p>
+            </div>
+
+            <!-- Do the calculation and / or reset -->
+            <div class="action-buttons">
+                <button onclick="calculateTip()">Calculate</button>
+                <button onclick="resetCalculator()">Reset</button>
+            </div>
+
+            <!--  Buttons to LOOP option cont or exit. EXIT NEEDS FIXING  -->
+            <div class="continue-section">
+                <p>Would you like to exit this calculator tip?</p>
+                <button onclick="resetCalculator()">To-do later</button>
+                <button onclick="exitCalculator()">Exit</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- All this plays nicely with css SO FAR -->
+</body>
+
+</html>
